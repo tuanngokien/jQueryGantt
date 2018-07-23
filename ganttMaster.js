@@ -702,6 +702,9 @@ GanttMaster.prototype.saveGantt = function (forTransaction) {
   if (!forTransaction) {
     ret.resources = this.resources;
     ret.roles = this.roles;
+    ret.canAdd = this.permissions.canAdd;
+    ret.canAddIssue = this.permissions.canAddIssue;
+    ret.canDelete = this.permissions.canDelete;
     ret.canWrite = this.permissions.canWrite;
     ret.canWriteOnParent = this.permissions.canWriteOnParent;
     ret.zoom = this.gantt.zoom;
